@@ -1,0 +1,52 @@
+# --- Unity Folders ---
+[LogS]/
+[Lib]rary/
+[Temp]/
+[Obj]ect/
+[Build]/
+[Builds]/
+[Logs]/
+_DeletedAssetsBackup/
+[MemoryCaptures]/
+[UserSettings]/
+
+# --- Assets generados que no deben subirse ---
+# Si usas Addressables o paquetes que generan datos temporales
+/[Aa]ssets/[Aa]ddressableAssetsData/*/*.bin*
+/[Aa]ssets/[Aa]ddressableAssetsData/*/*.json*
+
+# --- Archivos de Sistema/IDE ---
+.vs/
+.gradle/
+ExportedObj/
+.consulo/
+.idea/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svclog
+*.pdb
+*.opendb
+*.IDB
+*.VC.db
+*.VC.opendb
+*.apk
+
+# --- Archivos de SO ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Crashlytics / Reportes ---
+sysinfo.txt
+crashlytics-build.properties
+
+# --- URP / Shader Graph ---
+# A veces se generan archivos de cache de shaders
+.shadergraph
