@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">f-l3109-pc01.aulas.eif.urjc.es</domain>
+    </domain-config>
+</network-security-config>
