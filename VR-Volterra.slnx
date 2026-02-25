@@ -1,0 +1,10 @@
+﻿<Solution>
+  <Project Path="XCharts.Runtime.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="XCharts.Examples.csproj" />
+  <Project Path="XCharts.Editor.csproj" />
+  <Project Path="JBooth.MicroSplat.Core.Editor.csproj" />
+  <Project Path="ParrelSync.csproj" />
+  <Project Path="JBooth.MicroSplat.Core.csproj" />
+  <Project Path="Bezi.Editor.csproj" />
+</Solution>
