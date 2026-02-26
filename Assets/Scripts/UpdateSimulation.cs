@@ -25,11 +25,6 @@ public class UpdateSimulation : MonoBehaviour
         volterra = go.GetComponent<VolterraStatus>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void OnSubmitButtonToggled(bool isOn)
     {
         Debug.Log("EVENT LANZADO -------");

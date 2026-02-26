@@ -37,7 +37,7 @@ public class SliderValueUpdater : MonoBehaviour
 
     void ClampStep(int index, float value)
     {
-        Debug.LogError("--- AJUSTA SLIDER----" + index +  "----" + value);
+        Debug.Log("--- AJUSTA SLIDER----" + index +  "----" + value);
         float roundedValue = index < 8 ? Mathf.Round(value / step) * step : Mathf.Round(value / stepFire) * stepFire;
         sliders[index].SetValueWithoutNotify(roundedValue);
         inputFields[index].text = index < 8 ? roundedValue.ToString("0.###") : roundedValue.ToString("0"); // Update TMP_InputField with appropriate formatting

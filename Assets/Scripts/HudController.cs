@@ -27,6 +27,17 @@ public class HUDController : MonoBehaviour
         volterraStatus.withInvader.OnValueChanged += onAddedInvaders;
     }
 
+    void OnDestroy()
+    {
+        if (volterraStatus != null)
+        {
+            volterraStatus.preys.OnValueChanged -= onPreysChanged;
+            volterraStatus.predators.OnValueChanged -= onPredatorsChanged;
+            volterraStatus.invaders.OnValueChanged -= onInvadersChanged;
+            volterraStatus.withInvader.OnValueChanged -= onAddedInvaders;
+        }
+    }
+
     void onPredatorsChanged(float oldValue, float predators)
     {
         wolvesText.text = $"{Mathf.CeilToInt(predators)}";

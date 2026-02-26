@@ -23,7 +23,7 @@ public class AddInvasor : MonoBehaviour
 
     public void OnSubmitButtonToggled(bool isOn)
     {
-        Debug.LogError($"Añadir PULSADO: {isOn}");
+        Debug.Log($"Añadir PULSADO: {isOn}");
 
         int.TryParse(invader.text, out int invaders);
         float eta = etaSlider.value;

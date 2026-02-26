@@ -444,7 +444,7 @@ public class VolterraStatus : NetworkBehaviour
     {
         if (!this.loadActive.Value || this.load.Value <= 0)
             return 1f;
-        Debug.LogError("------- SE APLICA CARGA DEL ENTORNO---");
+        Debug.Log("------- SE APLICA CARGA DEL ENTORNO---");
         return 1f - (population / (float)this.load.Value);
     }
 
@@ -457,7 +457,7 @@ public class VolterraStatus : NetworkBehaviour
     private void applyStochasticNoise(float h)
     {
         if (!this.stochastic.Value || this.sigma.Value <= 0f) return;
-        Debug.LogError("------- SE APLICA RUIDO ESTOCASTICO----");
+        Debug.Log("------- SE APLICA RUIDO ESTOCASTICO----");
         float s = this.sigma.Value;
         float sqrtH = Mathf.Sqrt(h);
 
@@ -513,10 +513,10 @@ public class VolterraStatus : NetworkBehaviour
 
         if (this.loadActive.Value)
         {
-            // Reducimos la capacidad de carga proporcionalmente a la intensidad
-            // Ejemplo: a intensidad 100, el entorno solo soporta el 20% de lo habitual
-            float loadImpact = 1f - (0.80f * intensity); 
-            this.load.Value = Mathf.RoundToInt(this.load.Value * loadImpact);
+            // Reducimos la capacidad de carga proporcionalmente a la intensidad.
+            // A intensidad máxima (100), el entorno solo soporta el 20% de lo habitual.
+            float loadImpact = Mathf.Clamp01(0.8f * scale);
+            this.load.Value = Mathf.RoundToInt(this.load.Value * (1f - loadImpact));
         }
 
         Debug.Log($"[FireImpact] intensity={intensity} scale={scale:F2} preyMort={preyMort:F3} predMort={predMort:F3} invMort={invMort:F3}");

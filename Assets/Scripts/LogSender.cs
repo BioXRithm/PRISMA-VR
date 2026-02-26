@@ -7,16 +7,6 @@ using System;
 using TMPro;
 using UnityEngine.UI;
 
-public class InsecureCertificateHandler : CertificateHandler
-{
-    protected override bool ValidateCertificate(byte[] certificateData)
-    {
-        // Siempre retorna true, aceptando cualquier certificado (incluso si es nulo o inválido)
-        return true; 
-    }
-}
-
-
 public class LogSender : MonoBehaviour
 {
 	
@@ -80,7 +70,6 @@ public class LogSender : MonoBehaviour
             byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonData);
             webRequest.uploadHandler = new UploadHandlerRaw(bodyRaw);
             webRequest.downloadHandler = new DownloadHandlerBuffer();
-            webRequest.certificateHandler = new InsecureCertificateHandler();
             webRequest.SetRequestHeader("Content-Type", "application/json");
 
             yield return webRequest.SendWebRequest();
@@ -168,7 +157,6 @@ public class LogSender : MonoBehaviour
         {
             // Convertir la cadena JSON a bytes
             byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonData);
-            webRequest.certificateHandler = new InsecureCertificateHandler();
             // Adjuntar los bytes al UploadHandler
             webRequest.uploadHandler = new UploadHandlerRaw(bodyRaw);
             
