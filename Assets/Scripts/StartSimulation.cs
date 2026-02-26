@@ -44,7 +44,7 @@ public class StartSimulation : MonoBehaviour
             {
                 eq = 1;
             }
-             Debug.LogError("-----------------------------------------------El texto es: " + eq);
+            Debug.Log("-----------------------------------------------El texto es: " + eq);
             return eq;
         }
         else
@@ -56,7 +56,7 @@ public class StartSimulation : MonoBehaviour
 
     public void OnSubmitButtonToggled(bool isOn)
     {
-        Debug.LogError($"Iniciar PULSADO: {isOn}");
+        Debug.Log($"Iniciar PULSADO: {isOn}");
 
         if (!simRunning)
         {

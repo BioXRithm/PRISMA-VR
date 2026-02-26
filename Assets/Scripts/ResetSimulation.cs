@@ -24,12 +24,6 @@ public class ResetSimulation : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnSubmitButtonToggled(bool isOn) {
         volterra.stopSimulation();
         volterra.resetGraph();

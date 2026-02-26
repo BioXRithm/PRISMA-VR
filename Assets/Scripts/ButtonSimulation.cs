@@ -14,6 +14,6 @@ public class MyButtonHandler : MonoBehaviour
     {
         // Aquí va el código que quieres ejecutar,
         // por ejemplo, iniciar la simulación o cambiar de menú.
-        Debug.LogError("¡Botón pulsado! Evento lanzado.");
+        Debug.Log("¡Botón pulsado! Evento lanzado.");
     }
 }
